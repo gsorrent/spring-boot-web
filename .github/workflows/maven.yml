@@ -47,9 +47,9 @@ jobs:
         - uses: actions/checkout@v2
         - uses: actions/setup-java@v1
           with:
-            java-version: 14
+            java-version: 8
         - run: mvn -B package --file pom.xml -DskipTests
-        - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
+        - run: mkdir staging && cp target/*.war staging
         - uses: actions/upload-artifact@v1
           with:
             name: Package
