@@ -64,8 +64,8 @@ jobs:
           with:
              push: true
              context: .
-             tags: ${{ secrets.DOCKERHUB_USERNAME }}/github_action02:latest
+             tags: ${{ secrets.DOCKERHUB_USERNAME }}/spring-boot-web01:latest
         - name: build image 
-          run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/github_action02:latest .
+          run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/spring-boot-web01::latest .
         - name: push image 
-          run: docker push  ${{ secrets.DOCKERHUB_USERNAME }}/github_action02:latest
+          run: docker push  ${{ secrets.DOCKERHUB_USERNAME }}/spring-boot-web01::latest
